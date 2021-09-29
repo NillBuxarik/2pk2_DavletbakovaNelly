@@ -14,7 +14,7 @@ namespace pz_6
             while ((a - b) >= 0)
             {
                 a -= b;
-                c += 1;
+                c +=1;
             }
             Console.WriteLine($"Колличество отрезков B ={c} ");
             Console.ReadKey();
