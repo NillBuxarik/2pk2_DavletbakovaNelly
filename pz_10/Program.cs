@@ -93,6 +93,6 @@ namespace pz_10
 
         return sum_code_elems_of_str;
     }
-
-}
+    
+   }
 }
