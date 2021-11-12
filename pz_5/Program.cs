@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 
 namespace pz_5
 {
@@ -51,10 +52,9 @@ namespace pz_5
             }
             //Пятое задание
             Console.WriteLine("Задание 5");
-
-            for (int i = 4, j = 50; i - j != 211; i++, j--)
+            for (int r = 4, t = 50; Math.Abs(r - t) != 10; r++, t--)// при разнице в 11 массив не выводит, заменила на 10
             {
-                Console.WriteLine(i + " " + j);
+                Console.WriteLine(" {0} {1} ", r, t);
             }
         }
     }
