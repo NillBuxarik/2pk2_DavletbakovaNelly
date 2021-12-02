@@ -23,8 +23,7 @@ namespace pz_12
                     Console.WriteLine(result.ToLower());
                     break;
                 }
-            }
-            
+            }   
         }
     }
 }
