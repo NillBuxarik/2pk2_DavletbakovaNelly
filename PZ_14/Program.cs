@@ -1,36 +1,28 @@
 ﻿using System;
 using System.IO;
 
-namespace PZ_14
-   /* Дан текстовый файл f1 с произвольным содержимым.В файл f2 переписать только четные
-строки из файла f1 */
+namespace pz_14
 {
     class Program
+//        Дан текстовый файл f1 с произвольным содержимым.В файл f2 переписать только четные
+//строки из файла f1
     {
         static void Main(string[] args)
         {
-            String line;
-            try 
-            { 
-                StreamWriter f1 = new StreamWriter("C:\\f1.txt");
-                //"Считываем строки из файла F1"
-                line = sr.ReadLine();
-                while (line != null)
-                {
-                    Console.WriteLine(line);
-                    line = sr.ReadLine();
-                }
-                //закрываем файл
-                sr.Close();
-                Console.ReadLine();
-                // 
-                // записываем их в массив
-                
-
-                //for (i = 1; length(st); st1:= st[i] + st1;
-                //"Записываем в файл f2"
-            
+            FileStream file = new FileStream(@"C:\raid\1.txt", FileMode.Open, FileAccess.Read);
+            FileStream file1 = new FileStream(@"C:\raid\2.txt", FileMode.Open, FileAccess.Write);
+            StreamReader reader = new StreamReader(file);
+            StreamWriter writer = new StreamWriter(file1);
+            string line = "";
+            int i = 1;
+            while ((line = reader.ReadLine()) != null)
+            {
+                if (i % 2 == 0) writer.WriteLine(line);
+                i++;
             }
-        }    
+            writer.Close();
+            reader.Close();
+
+        }
     }
 }
